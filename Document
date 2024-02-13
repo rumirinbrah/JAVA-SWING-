@@ -51,3 +51,22 @@ BOX BOUNDS
 	label.setBounds(x,y,width,height);
 BOX ALLIGNMENT
 	label.setHorizontalAlignment(JLabel.CENTER);
+
+@JPANEL - (A GUI component that acts as a container for the other eles)
+ 
+IMP NOTES-
+	while setting bounds to a label make sure that the panel layout is set to
+	null	
+
+-CREATING PANEL
+	same as others
+	& make sure to use panel_name.setLayout(null);
+
+-RESIZE AN IMAGE 
+	ImageIcon hammy=new ImageIcon("F:\\Swing\\hammy.png");
+        Image temp=hammy.getImage();
+        Image newtemp=temp.getScaledInstance(50,50, Image.SCALE_SMOOTH);
+        hammy=new ImageIcon(newtemp);	
+
+-TO MAKE A PANEL ACT AS A FRAME
+	panel_name.setLayout(new BorderLayout());
