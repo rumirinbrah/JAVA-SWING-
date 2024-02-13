@@ -1,0 +1,58 @@
+#include<string>
+#include<iostream>
+using namespace std;
+
+int* game(int a[],int newA[],int n,int idx,int i)
+{
+    //cout<<"IDX "<<idx<<" i "<<i<<endl;
+    if(idx>=n)
+    {
+        return newA;
+    }
+    int min1,min2;
+    int min1Idx,min2Idx;
+    min1=min2=a[0];
+    
+    
+    for(int j=0;j<n;j++)
+    {
+        if(a[j]!=-1)
+        {
+            if(min1>a[j])
+            {
+                min1=a[j];
+                min1Idx=j;
+            }
+        }
+    }
+    for(int j=0;j<n;j++)
+    {
+        if(a[j]!=-1)
+        {
+            if(min2>a[j] && a[j]!=min1)
+            {
+                min2=a[j];
+                min2Idx=j;
+            }
+        }
+    }
+    a[min1Idx]=-1;
+    a[min2Idx]=-1;
+    cout<<"min1 "<<min1<<" min2 "<<min2<<endl;
+    newA[i]=min2;
+    newA[i+1]=min1;
+    return game(a,newA,n,idx+2,i+2);
+}
+
+int main()
+{   
+    int a[]={5,4,2,3};
+    int c[4];
+    int *b=game(a,c,4,0,0);
+    for(int i=0;i<4;i++)
+    {
+        cout<<b[i]<<" ";
+    }
+    return 0;
+}
+
