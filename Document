@@ -1,0 +1,53 @@
+SWING
+
+@ JFrame frame=new ----;
+
+-VISIBILITY
+	frame.setVisible(true);
+
+-Title 
+	frame.setTitle("");
+	
+-Size
+	frame.setSize(x,y);
+	
+-EXIT ON HITTING CROSS
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+-COLOR
+	frame.getContentPane().setBackground(new Color(0xE9CFFF));
+
+-BG ICON
+
+    ImageIcon logo=new ImageIcon("C:\\Users\\Atharva\\Documents\\COLLEGE\\hinata.jpg");
+	frame.setIconImage(logo.getImage());
+
+@ LABELS 
+	JLabel lablel=new JLable();
+
+TEXT-
+	lable.setText("IDK");
+	
+IMG-
+	label.setIcon(logo);
+	
+TEXT-ALIGN
+	label.setVertical/HorizontalTextPosition();
+	
+TEXT COLOR 
+	label.setForeground(new Color());
+	
+TEXT FONT
+	label.setFont("font",Font.BOLD,size);
+
+GAP BW TEXT AND ICON
+	label.setIconTextGap(10);
+
+BOX BORDER
+	Border border=BorderFactory.createLineBorder(color,widht);
+	label.setBorder(border);
+	
+BOX BOUNDS 
+	label.setBounds(x,y,width,height);
+BOX ALLIGNMENT
+	label.setHorizontalAlignment(JLabel.CENTER);
